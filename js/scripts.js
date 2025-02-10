@@ -1,7 +1,7 @@
 const content = document.getElementById("content");
 let counter = 1;
 let messageState = 0;
-let debugMode = false; // Variabile di debug
+const debugMode = false; // Variabile di debug
 
 function createItem() {
   const item = document.createElement("div");
@@ -38,6 +38,37 @@ if (!debugMode) {
     valentineMessage.className = "valentine-message";
     valentineMessage.textContent = "Buon San Valentino Stordita ❤️";
     content.appendChild(valentineMessage);
+
+    // gif appears
+    setTimeout(() => {
+      const valentineGif = document.createElement("img");
+      valentineGif.src =
+        "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzQ5dG1tM3I4YmR5c3B2MTF5M3EwMjV5dDZmc3cwM3NuOXd6YTNyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8QbwUh40Hl96yMgvOx/giphy.gif";
+      valentineGif.alt = "Valentine's Day";
+      valentineGif.className = "valentine-gif";
+      content.appendChild(valentineGif);
+
+      // Cambia l'opacità per far apparire gradualmente la GIF
+      setTimeout(() => {
+        valentineGif.style.opacity = 1;
+      }, 100); // Piccolo ritardo per assicurarsi che l'elemento sia aggiunto al DOM
+
+      // Aggiungi un altro messaggio dopo il caricamento della GIF
+      setTimeout(() => {
+        const finalMessage = document.createElement("div");
+        finalMessage.className = "valentine-message";
+        finalMessage.textContent = "Sofi ha un regalino per te 👀";
+        content.appendChild(finalMessage);
+
+        // Aggiungi l'ultimo messaggio con le emoji
+        setTimeout(() => {
+          const lastMessage = document.createElement("div");
+          lastMessage.className = "valentine-message";
+          lastMessage.textContent = "💝🍫";
+          content.appendChild(lastMessage);
+        }, 3000); // 3 secondi dopo il messaggio precedente
+      }, 3000); // 3 secondi dopo che la GIF è completamente visibile
+    }, 7000); // 4s for typing animation + 3s delay
   };
 
   setTimeout(disableLoadingAfterTimeout, 20000); // 20 seconds
@@ -73,7 +104,6 @@ if (!debugMode) {
     valentineGif.alt = "Valentine's Day";
     valentineGif.className = "valentine-gif";
     content.appendChild(valentineGif);
-    console.log("gif added");
 
     // Cambia l'opacità per far apparire gradualmente la GIF
     setTimeout(() => {
@@ -84,17 +114,16 @@ if (!debugMode) {
     setTimeout(() => {
       const finalMessage = document.createElement("div");
       finalMessage.className = "valentine-message";
-      finalMessage.textContent = "Sofi ha un regalino per te! 👀";
+      finalMessage.textContent = "Sofi ha un regalino per te 👀";
       content.appendChild(finalMessage);
-    }, 3000); // 3 secondi dopo che la GIF è completamente visibile
-    console.log("message added");
 
-    setTimeout(() => {
-      const finalMessage = document.createElement("div");
-      finalMessage.className = "valentine-message";
-      finalMessage.textContent = "💝🍫";
-      content.appendChild(finalMessage);
-    }, 6000); // 6 secondi dopo che la GIF è completamente visibile
-    console.log("message added");
+      // Aggiungi l'ultimo messaggio con le emoji
+      setTimeout(() => {
+        const lastMessage = document.createElement("div");
+        lastMessage.className = "valentine-message";
+        lastMessage.textContent = "💝🍫";
+        content.appendChild(lastMessage);
+      }, 3000); // 3 secondi dopo il messaggio precedente
+    }, 3000); // 3 secondi dopo che la GIF è completamente visibile
   }, 7000); // 4s for typing animation + 3s delay
 }
