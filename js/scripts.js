@@ -1,7 +1,7 @@
 const content = document.getElementById("content");
 let counter = 1;
 let messageState = 0;
-const debugMode = false; // Variabile di debug
+let debugMode = false; // Variabile di debug
 
 function createItem() {
   const item = document.createElement("div");
@@ -73,6 +73,7 @@ if (!debugMode) {
     valentineGif.alt = "Valentine's Day";
     valentineGif.className = "valentine-gif";
     content.appendChild(valentineGif);
+    console.log("gif added");
 
     // Cambia l'opacità per far apparire gradualmente la GIF
     setTimeout(() => {
@@ -86,6 +87,7 @@ if (!debugMode) {
       finalMessage.textContent = "Sofi ha un regalino per te! 👀";
       content.appendChild(finalMessage);
     }, 3000); // 3 secondi dopo che la GIF è completamente visibile
+    console.log("message added");
 
     setTimeout(() => {
       const finalMessage = document.createElement("div");
@@ -93,5 +95,6 @@ if (!debugMode) {
       finalMessage.textContent = "💝🍫";
       content.appendChild(finalMessage);
     }, 6000); // 6 secondi dopo che la GIF è completamente visibile
+    console.log("message added");
   }, 7000); // 4s for typing animation + 3s delay
 }
