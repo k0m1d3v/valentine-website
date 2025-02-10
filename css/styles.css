@@ -1,0 +1,105 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffe6e6;
+  color: #ff3366;
+}
+
+header {
+  width: 100%;
+  background-color: #ff3366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.content {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.item {
+  background: white;
+  padding: 20px;
+  margin: 150px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.item h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.valentine-message {
+  font-size: 26px; /* Aumenta la dimensione del testo */
+  color: #ff3366;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Dancing Script", cursive;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.valentine-gif {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* Aggiungi transizione per l'opacità */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff3366;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #ff3366;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .content {
+    width: 80%;
+  }
+}
