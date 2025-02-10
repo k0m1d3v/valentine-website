@@ -31,8 +31,9 @@ header h1 {
 
 .item {
   background: white;
-  padding: 20px;
+  padding: 100px;
   margin: 150px 0;
+  font-size: 30px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: center;
