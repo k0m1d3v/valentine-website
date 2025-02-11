@@ -1,7 +1,7 @@
 const content = document.getElementById("content");
 let counter = 1;
 let messageState = 0;
-const debugMode = false; // Variabile di debug
+const debugMode = true; // Variabile di debug
 
 function createItem() {
   const item = document.createElement("div");
