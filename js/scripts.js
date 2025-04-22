@@ -7,13 +7,13 @@ function createItem() {
   const item = document.createElement("div");
   item.className = "item";
   if (messageState === 0) {
-    item.textContent = "Scorri!";
+    item.textContent = "Scroll!";
   } else if (messageState === 1) {
-    item.textContent = "Più veloce";
+    item.textContent = "FASTER!";
   } else if (messageState === 2) {
-    item.textContent = "Ci sei quasi!";
+    item.textContent = "Almost there!";
   } else if (messageState === 3) {
-    item.textContent = "Ce l'hai fatta!";
+    item.textContent = "You did it!";
   }
   content.appendChild(item);
 }
@@ -36,7 +36,7 @@ if (!debugMode) {
     // Crea e aggiungi il messaggio di San Valentino
     const valentineMessage = document.createElement("div");
     valentineMessage.className = "valentine-message";
-    valentineMessage.textContent = "Buon San Valentino Stordita ❤️";
+    valentineMessage.textContent = "Happy Valentine's Day ❤️";
     content.appendChild(valentineMessage);
 
     // gif appears
@@ -57,7 +57,7 @@ if (!debugMode) {
       setTimeout(() => {
         const finalMessage = document.createElement("div");
         finalMessage.className = "valentine-message";
-        finalMessage.textContent = "Sofi ha un regalino per te 👀";
+        finalMessage.textContent = "Another message 👀";
         content.appendChild(finalMessage);
 
         // Aggiungi l'ultimo messaggio con le emoji
@@ -93,7 +93,7 @@ if (!debugMode) {
   // Modalità debug: mostra direttamente il messaggio di San Valentino
   const valentineMessage = document.createElement("div");
   valentineMessage.className = "valentine-message";
-  valentineMessage.textContent = "Buon San Valentino Stordita ❤️";
+  valentineMessage.textContent = "Mesagge for the person ❤️";
   content.appendChild(valentineMessage);
 
   // gif appears
@@ -114,7 +114,7 @@ if (!debugMode) {
     setTimeout(() => {
       const finalMessage = document.createElement("div");
       finalMessage.className = "valentine-message";
-      finalMessage.textContent = "Sofi ha un regalino per te 👀";
+      finalMessage.textContent = "Another message 👀";
       content.appendChild(finalMessage);
 
       // Aggiungi l'ultimo messaggio con le emoji
